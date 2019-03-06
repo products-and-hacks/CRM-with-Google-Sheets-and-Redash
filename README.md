@@ -10,6 +10,9 @@ Part of our #lowcode hacks, this project uses Google Sheets + Google Apps Script
   
 ## How it works
 
+### Files
+  - [menu.gs](https://github.com/products-and-hacks/CRM-with-Google-Sheets-and-Redash/blob/master/menu.gs) - Create a menu at the "control spreadsheet" and soon alert functionality. 
+
 ### Create Spreadsheets
 
 ### Send data to Database
