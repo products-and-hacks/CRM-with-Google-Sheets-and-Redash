@@ -10,12 +10,12 @@ function checkNewData() {
   
   for(var a = 2; a <= lastRow; a++){ 
     if(ss.getSheetByName("[CLIENTS SHEET]").getRange(a, 4).getValue()) {  //Check if spreasheet was  created
-      var clientSpreadsheet = SpreadsheetApp.openByUrl(ss.getSheetByName("[CLIENTS SHEET]").getRange(a, 4).getValue());
-      var name = clientSpreadsheet.getName();
+      var clientsSpreadsheet = SpreadsheetApp.openByUrl(ss.getSheetByName("[CLIENTS SHEET]").getRange(a, 4).getValue());
+      var name = clienstSpreadsheet.getName();
       var group-client-batch = name.split("-"); //This is to query by a group or batch
       
       //call for logic to store in database
-      //emailStatus = forClients(clientSpreadsheet,group-client-batch, emailStatus);      
+      emailStatus = forClients(clientsSpreadsheet,group-client-batch, emailStatus);      
     }
   }
   var end = new Date();
