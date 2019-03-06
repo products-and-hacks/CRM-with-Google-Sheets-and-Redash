@@ -13,10 +13,19 @@ Part of our #lowcode hacks, this project uses Google Sheets + Google Apps Script
 ### Files
   - [menu.gs](https://github.com/products-and-hacks/CRM-with-Google-Sheets-and-Redash/blob/master/menu.gs) - Create a menu at the "control spreadsheet" and soon alert functionality. 
   - [generateSheets.gs](https://github.com/products-and-hacks/CRM-with-Google-Sheets-and-Redash/blob/master/generateSpreadsheets.gs) - To create a spreadsheet for each client/supplier and add editors - who can access - each spreadsheet.
+  - [checkNewData.gs](https://github.com/products-and-hacks/CRM-with-Google-Sheets-and-Redash/blob/master/checkNewData.gs) - check if any new data is inserted and call the logical function to send to database.
+  - [forClients.gs](https://github.com/products-and-hacks/CRM-with-Google-Sheets-and-Redash/blob/master/forClients.gs) - check with a specific logic for new data and send to database at Azure SQL Server.
 
 ### Create Spreadsheets
+You can create Spreadsheets from the menu. You will need a sheet with all Clients and another one to editors - who has access to what spreadsheet. This will create a spreadsheet for every client who hasn't a spreadsheet created already. 
 
 ### Send data to Database
+This is triggered in a time based (we used once a day, that was fine for us). It checks all spreadsheets created for any new data and send a email everyday with how many rows was inserted for each client. 
+
+### Alerts
+SOON.
 
 ### Use Redash
+We used Redash for query and present dashboards for our KPIs. 
 
+Have fun and any doubts, [@efremfilho](https://twitter.com/efremfilho)!
